@@ -1,16 +1,98 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&family=Inter:wght@400;600;700&family=Spartan:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Spartan', sans-serif;
+}
+body{
+    font-family: 'Spartan', sans-serif;
+}
+.navItem {
+    @apply
+    w-fit block mt-4 lg:inline-block lg:mt-0 text-navColor mr-4 font-bold text-base duration-300 hover:text-greenColor relative  capitalize
+       before:absolute before:w-[0] before:h-[2px] before:bottom-0 before:left-0 before:bg-greenColor before:rounded-[2px] before:duration-300 hover:before:w-[50%]
+}
+.active{
+    @apply
+    text-greenColor relative
+    before:absolute before:w-[50%] before:h-[2px] before:bottom-0 before:left-0 before:bg-greenColor before:rounded-[2px]
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.land{
+    background-image: url(../public/img/hero4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-
-* {
-  box-sizing: border-box;
+.btnBg{
+    background-image: url(../public/img/button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.adsLand{
+    background-image: url(../public/img/banner/b2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bg-1{
+    background-image: url(../public/img/banner/b17.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bg-2{
+    background-image: url(../public/img/banner/b10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.class-1{
+    background-image: url(../public/img/banner/b7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.class-2{
+    background-image: url(../public/img/banner/b4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.class-3{
+    background-image: url(../public/img/banner/b18.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bg-email{
+    background-image: url(../public/img/banner/b1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.landShop{
+    background-image: url(../public/img/banner/b1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.landAbout{
+    background-image: url(../public/img/about/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.scrolling{
+    animation: scrolling 10s linear infinite;
+}
+@keyframes scrolling{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
